@@ -27,6 +27,7 @@ class SimplePriceTest(unittest.TestCase):
         self.assertEqual((8 * 4 * 0.8) + (8 * 2 * 0.95), simple_price([0, 0, 1, 2, 2, 3]))
         self.assertEqual(8 + (8 * 5 * 0.75), simple_price([0, 1, 1, 2, 3, 4]))
 
+    # this one will fail
     def testEdgeCases(self):
         self.assertEqual(2 * (8 * 4 * 0.8), simple_price([0, 0, 1, 1, 2, 2, 3, 4]))
         self.assertEqual(3 * (8 * 5 * 0.75) + 2 * (8 * 4 * 0.8),

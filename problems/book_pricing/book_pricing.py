@@ -75,13 +75,3 @@ def price(book_list):
     for num in cum_list:
         total += 8 * num * (1 - discount_dict[num])
     return total
-
-
-def main():
-    books = [0, 0, 1, 1, 2, 2, 3, 4]
-    total = price(books)
-    print(total)
-
-
-if __name__ == "__main__":
-    main()
