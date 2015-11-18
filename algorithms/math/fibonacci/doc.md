@@ -4,7 +4,7 @@
 
 It uses a simple recursive function to calculate fibonacci number of n elements.
 
-It is O(2^n^) (less than that strictly because of less calls at the bottom).
+It is O(2^n) (less than that strictly because of less calls at the bottom).
 
 
 ## fibonacci_with_mem(n)
