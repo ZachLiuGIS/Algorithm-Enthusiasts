@@ -2,7 +2,6 @@ import unittest
 from count_num_of_islands import count_land_loop, count_land_recursive
 
 
-
 class TwoLoopsSolutionTest(unittest.TestCase):
 
     def test_function(self):
