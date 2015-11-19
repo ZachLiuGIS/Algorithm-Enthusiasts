@@ -9,3 +9,4 @@ class StringPermutationTest(unittest.TestCase):
         self.assertEquals = (str_permutation(s), [
             'abc', 'abc', 'bac', 'bca', 'cab', 'cba'
         ])
+
