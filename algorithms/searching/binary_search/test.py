@@ -11,5 +11,3 @@ class BinarySearchTest(unittest.TestCase):
         self.assertEqual(binary_search(arr1, 5), 4)
         self.assertEqual(binary_search(arr2, 10), False)
         self.assertEqual(binary_search(arr3, 16), 7)
-
-
