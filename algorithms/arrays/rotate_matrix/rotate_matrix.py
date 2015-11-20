@@ -28,9 +28,9 @@ def rotate_matrix_in_place(matrix):
         # print(start, end)
         for j in range(start, end - 1):
             top_left = matrix[start][j]
-            matrix[start][j] = matrix[length - 1 - j][i]
-            matrix[length - 1 - j][i] = matrix[length - 1 - i][length - 1 - j]
-            matrix[length - 1 - i][length - 1 - j] = matrix[j][length - 1 - i]
+            matrix[start][j] = matrix[length - 1 - j][start]
+            matrix[length - 1 - j][start] = matrix[length - 1 - start][length - 1 - j]
+            matrix[length - 1 - i][length - 1 - j] = matrix[j][length - 1 - start]
             matrix[j][length - 1 - i] = top_left
     # print(matrix)
     return matrix
