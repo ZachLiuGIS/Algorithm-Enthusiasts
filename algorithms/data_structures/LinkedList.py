@@ -56,7 +56,11 @@ class LinkedList(object):
         raise ValueError('Data not in list')
 
     def print(self):
+        lst = []
         current = self.head
         while current:
-            print(current.get_data())
+            lst.append(str(current.get_data()))
             current = current.get_next()
+        print('->'.join(lst))
+
+

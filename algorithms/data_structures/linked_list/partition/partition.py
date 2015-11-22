@@ -14,7 +14,7 @@ def partition(lst, value):
 
     while current:
         data = current.get_data()
-        if current.get_data() < value:
+        if data < value:
             below_lst.insert(data)
         else:
             above_lst.insert(data)

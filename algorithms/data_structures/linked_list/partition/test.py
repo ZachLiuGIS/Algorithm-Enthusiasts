@@ -8,7 +8,7 @@ from partition import partition
 from LinkedList import LinkedList
 
 
-class ReturnKthToLastTest(unittest.TestCase):
+class PartitionTest(unittest.TestCase):
     def setUp(self):
         self.default_list = LinkedList()
         self.default_list.insert(1)
