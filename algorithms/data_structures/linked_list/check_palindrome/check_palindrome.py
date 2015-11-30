@@ -20,7 +20,9 @@ def check_palindrome(lst):
     current_1 = lst.head
     current_2 = lst2.head
 
-    while current_1 is not None:
+    length = lst.size()
+
+    for i in range(int(length / 2)):
         if not current_1.get_data() == current_2.get_data():
             return False
         current_1 = current_1.get_next()
