@@ -6,7 +6,8 @@ sys.path.append(DATA_STRUCTURE_DIR)
 
 from LinkedList import LinkedList
 from add_two_numbers import list_to_num, num_to_list, add_two_numbers, \
-    list_to_num_reverse, num_to_list_reverse, add_two_numbers_reverse
+    list_to_num_reverse, num_to_list_reverse, add_two_numbers_reverse, \
+    add_two_numbers_adding_digit, add_two_numbers_adding_digit_reverse
 
 
 class AddTwoNumbersTest(unittest.TestCase):
@@ -51,6 +52,30 @@ class AddTwoNumbersTest(unittest.TestCase):
 
     def test_add_two_numbers_reverse(self):
         total = add_two_numbers_reverse(self.lst1, self.lst2)
+        self.lst1.print()
+        self.lst2.print()
+        total.print()
+        current = total.head
+        self.assertEqual(current.get_data(), 5)
+        current = current.get_next()
+        self.assertEqual(current.get_data(), 9)
+        current = current.get_next()
+        self.assertEqual(current.get_data(), 1)
+
+    def test_add_two_numbers_adding_digit(self):
+        total = add_two_numbers_adding_digit(self.lst1, self.lst2)
+        self.lst1.print()
+        self.lst2.print()
+        total.print()
+        current = total.head
+        self.assertEqual(current.get_data(), 6)
+        current = current.get_next()
+        self.assertEqual(current.get_data(), 0)
+        current = current.get_next()
+        self.assertEqual(current.get_data(), 1)
+
+    def test_add_two_numbers_adding_digit_reverse(self):
+        total = add_two_numbers_adding_digit_reverse(self.lst1, self.lst2)
         self.lst1.print()
         self.lst2.print()
         total.print()
