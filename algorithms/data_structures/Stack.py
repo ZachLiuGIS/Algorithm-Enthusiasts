@@ -19,8 +19,8 @@ class Stack:
     class Empty(Exception):
         pass
 
-    def __init__(self, head=None):
-        self.head = head
+    def __init__(self):
+        self.head = None
 
     def is_empty(self):
         return self.head is None
@@ -49,3 +49,11 @@ class Stack:
             count += 1
             current = current.get_next()
         return count
+
+    def print(self):
+        lst = []
+        current = self.head
+        while current:
+            lst.append(str(current.get_data()))
+            current = current.get_next()
+        print('->'.join(lst))
