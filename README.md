@@ -46,4 +46,10 @@
 		- one_edit_away: check if a string is one edit away from the other
 		- string_compression: string compression algorithms
 		- string_permutation: string permutation algorithms
+
+
+- Problems:
+	- book_pricing: calculate total price based on group discounts
+	- count_num_of_islands: given a matrix, 1 is land and 0 is water, count how many islands in the matrix
+	- game_of_life: simulation of game of life evolution
 	
