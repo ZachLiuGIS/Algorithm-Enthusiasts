@@ -46,6 +46,7 @@
 		- one_edit_away: check if a string is one edit away from the other
 		- string_compression: string compression algorithms
 		- string_permutation: string permutation algorithms
+		- zig_zag_conversion: convert a string in zig zag order into line by line order
 
 
 - Problems:
