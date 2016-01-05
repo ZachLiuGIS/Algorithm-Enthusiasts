@@ -12,7 +12,8 @@
 - Algorithms
 	- arrays
 		- rotate_matrix: rotate a matrix
-		- two_sum: Given an array of integers, find two numbers such that they add up to a specific target number.
+		- two_sum: Given an array of integers, find two numbers such that they add up to a specific target number
+		- max_product_subarray: Givein an array of integers, find the max product of a sub-array
 	
 	- data_structures
 		- linked_list
