@@ -8,4 +8,4 @@ with the second element, thus the second element will be the second smallest aft
 
 Repeat the process until the end.
 
-the time is O(N) and the space is O(1)
+the time is O(N^2) and the space is O(1)

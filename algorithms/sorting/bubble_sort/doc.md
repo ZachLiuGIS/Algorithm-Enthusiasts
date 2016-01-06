@@ -12,4 +12,4 @@ Repeat the process until only the first two elements are compared and swapped if
 
 Then the sort will complete.
 
-It is O(N2) in time and O(1) in space.
+It is O(N^2) in time and O(1) in space.

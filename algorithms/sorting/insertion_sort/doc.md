@@ -8,4 +8,4 @@ elements moved.
 
 Repeat this until the last element.
 
-The time is O(N) and space is O(1)
+The time is O(N^2) and space is O(1)
