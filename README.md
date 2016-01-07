@@ -24,13 +24,14 @@
 			- partition: divide a linked_list into two, one has items larger than a value and the rest in the other
 			- remove_duplicates: remove duplicates nodes
 			- return_kth_to_last: return the kth to last element in the linked_list
-	
-	- queue
-		- stack_queue: implement a queue using two stacks
-	
-	- stack
-		- sort_stack: return a sorted stack
-		- stack_min: implement a stack that can track its min
+		- queue
+			- stack_queue: implement a queue using two stacks	
+		- stack
+			- sort_stack: return a sorted stack
+			- stack_min: implement a stack that can track its min
+		- priority queue
+			- MaxPQ
+			- MinPQ
 	
 	- searching
 		- binary_search
@@ -39,6 +40,9 @@
 		- bubble_sort
 		- insertion_sort
 		- selection_sort
+		- shell_sort
+		- merge_sort
+		- quick_sort
 	
 	- strings
 		- check_permutation: given two strings, check if one is the permutation of the other
