@@ -61,3 +61,27 @@ MaxPQ and MinPQ have the following public methods
 - peek_min()/peek_max(): get the max item (MaxPQ) or min item(MinPQ) from the pq without delete
 - del_min()/del_max(): delete and return the max item (MaxPQ) or min item(MinPQ) from the pq
 
+
+## BinarySearchTree
+
+A binary search tree is a binary tree where keys that are less than their parent are at the left subtree while those
+larger are at the right subtree.
+
+The BinarySearchTree class uses internal Node class to represent each tree node, and each node stores a key-value pair
+
+The Binary Search Tree class has the following public methods
+
+- size(): return the size of the tree
+- get(key): get the value associated with the key
+- put(key, value): update the value associated with the key if key exists, create a new node otherwise
+- min(): get the min key of the tree
+- max(): get the max key of the tree
+- floor(key): get the largest key in the tree that is less than or equal to the given key
+- select(rank): get the key that has rank number of keys smaller than itself
+- rank(key): get the number of keys that are smaller than the given key
+- delete_min(): delete the node with the smallest key
+- delete(key): delete the node with the given key
+- keys(lo, hi): get the keys within the (lo, hi) range
+
+
+
