@@ -135,7 +135,7 @@ class BinarySearchTree(object):
 
     def delete_min(self):
         root = self.root
-        root = self._delete_min(root)
+        self.root = self._delete_min(root)
 
     def _delete_min(self, node):
         if node.left is None:

@@ -84,4 +84,24 @@ The Binary Search Tree class has the following public methods
 - keys(lo, hi): get the keys within the (lo, hi) range
 
 
+## LeftLeanRedBlackTree
+
+This is a python implementation of left lean RedBlackTree implemented based on Sedgewick's Algorithms 4th edition
+
+[reference](https://www.cs.princeton.edu/~rs/talks/LLRB/RedBlack.pdf)
+
+[source](http://algs4.cs.princeton.edu/33balanced/RedBlackBST.java.html)
+
+The Binary Search Tree class has the following public methods
+
+- size(): return the size of the tree
+- get(key): get the value associated with the key
+- put(key, value): update the value associated with the key if key exists, create a new node otherwise
+- min(): get the min key of the tree
+- max(): get the max key of the tree
+- delete_min(): delete the node with the smallest key
+- delete_max(): delete the node with the smallest key
+- delete(key): delete the node with the given key
+
+
 
