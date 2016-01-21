@@ -8,12 +8,12 @@ class TreeNode(object):
 def get_value(lst, node):
     if node is None:
         return
-    lst.append(node.val)
     get_value(lst, node.left)
     get_value(lst, node.right)
+    lst.append(node.val)
 
 
-def pre_order_traversal_recursive(root):
+def post_order_traversal_recursive(root):
     """
     :type root: TreeNode
     :rtype: List[int]
@@ -23,22 +23,29 @@ def pre_order_traversal_recursive(root):
     return lst
 
 
-def pre_order_traversal(root):
+def post_order_traversal(root):
     res = []
     if root is None:
         return res
-    stack = [root]
+    stack = []
+    if root.right:
+        stack.append(root.right)
+    if root.left:
+        stack.append(root.left)
+    stack.append(root)
+
     while stack:
         node = stack.pop()
-        res.append(node.val)
-        if node.right:
-            stack.append(node.right)
-        if node.left:
-            stack.append(node.left)
+        if root.right:
+            stack.append(root.right)
+        if root.left:
+            stack.append(root.left)
+        res.append(root.val)
+
     return res
 
 
-def pre_order_traversal2(root):
+def post_order_traversal2(root):
     res = []
     stack = []
     node = root
@@ -46,11 +53,11 @@ def pre_order_traversal2(root):
         if node:
             stack.append(node)
             res.append(node.val)
-            node = node.left
+            node = node.right
         else:
             stack_node = stack.pop()
-            node = stack_node.right
-    return res
+            node = stack_node.left
+    return res[::-1]
 
 
 if __name__ == '__main__':
@@ -61,8 +68,8 @@ if __name__ == '__main__':
     root.right = TreeNode(5)
     root.right.left = TreeNode(6)
     root.right.right = TreeNode(7)
-    print(pre_order_traversal_recursive(root))
+    print(post_order_traversal_recursive(root))
 
-    assert pre_order_traversal_recursive(root) == [1, 2, 3, 4, 5, 6, 7]
-    assert pre_order_traversal(root) == [1, 2, 3, 4, 5, 6, 7]
-    assert pre_order_traversal2(root) == [1, 2, 3, 4, 5, 6, 7]
+    assert post_order_traversal_recursive(root) == [3, 4, 2, 6, 7, 5, 1]
+    # assert post_order_traversal(root) == [3, 4, 2, 6, 7, 5, 1]
+    assert post_order_traversal2(root) == [3, 4, 2, 6, 7, 5, 1]

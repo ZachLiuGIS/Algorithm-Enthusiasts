@@ -8,12 +8,12 @@ class TreeNode(object):
 def get_value(lst, node):
     if node is None:
         return
-    lst.append(node.val)
     get_value(lst, node.left)
+    lst.append(node.val)
     get_value(lst, node.right)
 
 
-def pre_order_traversal_recursive(root):
+def in_order_traversal_recursive(root):
     """
     :type root: TreeNode
     :rtype: List[int]
@@ -23,33 +23,19 @@ def pre_order_traversal_recursive(root):
     return lst
 
 
-def pre_order_traversal(root):
-    res = []
-    if root is None:
-        return res
-    stack = [root]
-    while stack:
-        node = stack.pop()
-        res.append(node.val)
-        if node.right:
-            stack.append(node.right)
-        if node.left:
-            stack.append(node.left)
-    return res
-
-
-def pre_order_traversal2(root):
+def in_order_traversal(root):
     res = []
     stack = []
     node = root
     while stack or node is not None:
         if node:
             stack.append(node)
-            res.append(node.val)
             node = node.left
         else:
             stack_node = stack.pop()
+            res.append(stack_node.val)
             node = stack_node.right
+    print(res)
     return res
 
 
@@ -61,8 +47,7 @@ if __name__ == '__main__':
     root.right = TreeNode(5)
     root.right.left = TreeNode(6)
     root.right.right = TreeNode(7)
-    print(pre_order_traversal_recursive(root))
+    print(in_order_traversal_recursive(root))
 
-    assert pre_order_traversal_recursive(root) == [1, 2, 3, 4, 5, 6, 7]
-    assert pre_order_traversal(root) == [1, 2, 3, 4, 5, 6, 7]
-    assert pre_order_traversal2(root) == [1, 2, 3, 4, 5, 6, 7]
+    assert in_order_traversal_recursive(root) == [3, 2, 4, 1, 6, 5, 7]
+    assert in_order_traversal(root) == [3, 2, 4, 1, 6, 5, 7]
