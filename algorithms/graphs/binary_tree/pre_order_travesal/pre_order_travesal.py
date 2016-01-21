@@ -46,6 +46,7 @@ if __name__ == '__main__':
     root.right = TreeNode(5)
     root.right.left = TreeNode(6)
     root.right.right = TreeNode(7)
+    print(pre_order_traversal_recursive(root))
 
     assert pre_order_traversal_recursive(root) == [1, 2, 3, 4, 5, 6, 7]
     assert pre_order_traversal(root) == [1, 2, 3, 4, 5, 6, 7]
