@@ -1,3 +1,5 @@
+import cProfile
+
 def print_matrix(m):
     for row in m:
         print(row)
@@ -104,6 +106,8 @@ def find_shortest_distance_to_guards2(room):
 
 
 if __name__ == '__main__':
+    profile = True
+
     room1 = [
         [1, 1, 0, 0],
         [0, 1, 0, 1],
@@ -128,4 +132,18 @@ if __name__ == '__main__':
     print_matrix(find_shortest_distance_to_guards2(room1))
     print()
     print_matrix(find_shortest_distance_to_guards2(room2))
+
+    if profile:
+        print('solution 1, room 1')
+        cProfile.runctx('find_shortest_distance_to_guards(room1)', globals(), locals())
+        print('solution 2, room 1')
+        cProfile.runctx('find_shortest_distance_to_guards2(room1)', globals(), locals())
+        print('solution 1, room 2')
+        cProfile.runctx('find_shortest_distance_to_guards(room2)', globals(), locals())
+        print('solution 2, room 2')
+        cProfile.runctx('find_shortest_distance_to_guards2(room2)', globals(), locals())
+
+
+
+
 
