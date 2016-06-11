@@ -1,17 +1,17 @@
 class Node(object):
 
-    def __init__(self, data=None, next_node=None):
+    def __init__(self, data=None, next=None):
         self.data = data
-        self.next_node = next_node
+        self.next = next
 
     def get_data(self):
         return self.data
 
     def get_next(self):
-        return self.next_node
+        return self.next
 
     def set_next(self, new_next):
-        self.next_node = new_next
+        self.next = new_next
 
 
 class LinkedList(object):
@@ -39,7 +39,7 @@ class LinkedList(object):
                 return current
             else:
                 current = current.get_next()
-        raise ValueError('Data not in list')
+        return None
 
     def delete(self, data):
         current = self.head
@@ -53,7 +53,7 @@ class LinkedList(object):
                 return current
             prev = current
             current = current.get_next()
-        raise ValueError('Data not in list')
+        return None
 
     def print(self):
         lst = []

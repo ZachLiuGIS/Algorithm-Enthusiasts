@@ -25,8 +25,7 @@ class LinkedListTest(unittest.TestCase):
         # normal search
         self.assertEqual(self.default_list.search('c'), self.default_list.head.get_next())
         # search value not in list
-        with self.assertRaises(ValueError):
-            self.default_list.search('e')
+        self.assertEqual(self.default_list.search('e'), None)
 
     def test_delete_head(self):
         self.default_list.delete('d')
@@ -38,6 +37,5 @@ class LinkedListTest(unittest.TestCase):
         self.assertEqual(self.default_list.size(), 3)
 
     def test_delete_not_exist(self):
-        with self.assertRaises(ValueError):
-            self.default_list.delete('e')
+        self.assertEqual(self.default_list.delete('e'), None)
 
