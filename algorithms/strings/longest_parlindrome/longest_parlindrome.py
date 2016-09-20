@@ -69,6 +69,7 @@ if __name__ == '__main__':
     assert longest_palindrome('eeeeeabcdefgfedcba') == 'abcdefgfedcba'
 
     assert longest_palindrome_dp('a') == 'a'
+    assert longest_palindrome_dp('ccc') == 'ccc'
     assert longest_palindrome_dp('abcabcee') == 'ee'
     assert longest_palindrome_dp('abcdefgfedcba') == 'abcdefgfedcba'
     assert longest_palindrome_dp('abcdefgfedcbaeeeee') == 'abcdefgfedcba'

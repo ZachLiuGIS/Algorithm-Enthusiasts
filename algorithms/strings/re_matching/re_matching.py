@@ -38,10 +38,10 @@ def is_match_dp(s, p):
 
 
 if __name__ == '__main__':
-    # assert is_match_dp('aa', 'aa') == True
-    # assert is_match_dp('aa', 'a') == False
-    # # assert is_match_dp('aa', '*') == True
-    # assert is_match_dp('aa', '.*') == True
-    # assert is_match_dp('ab', 'a*b') == True
+    assert is_match_dp('aa', 'aa') == True
+    assert is_match_dp('aa', 'a') == False
+    assert is_match_dp('aa', '*') == False
+    assert is_match_dp('aa', '.*') == True
+    assert is_match_dp('ab', 'a*b') == True
     assert is_match_dp('aab', 'aa*b'), True
-    # assert is_match_dp('aab', 'c*a*b'), True
+    assert is_match_dp('aab', 'c*a*b'), True
