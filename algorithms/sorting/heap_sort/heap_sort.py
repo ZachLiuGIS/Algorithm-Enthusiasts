@@ -1,18 +1,18 @@
 def heap_sort(arr):
     def heapify(a):
-        i = int(len(arr) / 2) - 1
+        i = int(len(a) / 2) - 1
         while i >= 0:
-            sink(arr, i, len(arr) - 1)
+            sink(arr, i, len(a) - 1)
             i -= 1
 
     def sink(a, i, n):
         while 2 * i <= n:
             j = 2 * i
-            if j + 1 <= n and arr[j] < arr[j + 1]:
+            if j + 1 <= n and a[j] < a[j + 1]:
                 j += 1
-            if arr[i] >= arr[j]:
+            if a[i] >= a[j]:
                 break
-            arr[i], arr[j] = arr[j], arr[i]
+            a[i], a[j] = a[j], a[i]
             i = j
 
     heapify(arr)
