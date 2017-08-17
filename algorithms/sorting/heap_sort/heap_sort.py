@@ -2,7 +2,7 @@ def heap_sort(arr):
     def heapify(a):
         i = int(len(a) / 2) - 1
         while i >= 0:
-            sink(arr, i, len(a) - 1)
+            sink(a, i, len(a) - 1)
             i -= 1
 
     def sink(a, i, n):
