@@ -36,8 +36,8 @@ class LinkedList(object):
         while current != None : 
             #remove first one
             if current.data == data :
-                tmp = current .next
-                self.head  = tmp
+                tmp = current.next
+                self.head = tmp
             #remove other places
             elif current.next != None and current.next.data == data :
                 current.next = current.next.next
