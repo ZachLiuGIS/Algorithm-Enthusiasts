@@ -11,8 +11,21 @@ class LinkedList(object):
 
     def insert(self, data):
         new_node = Node(data)
+        # set push the old value to come after old header.
         new_node.next=self.head
+        # set the new head as the new value
         self.head = new_node
+
+    def delete(self, data ):
+        current = self.head
+        while current != None : 
+            #remove first one
+            if current.data == data :
+                self.head  = current.next
+            #remove other places
+            elif current.next != None and current.next.data == data :
+                current.next = current.next.next
+            current = current.next
 
     def size(self):
         current = self.head
@@ -31,17 +44,6 @@ class LinkedList(object):
             current = current.next
         return None
 
-    def delete(self, data ):
-        current = self.head
-        while current != None : 
-            #remove first one
-            if current.data == data :
-                tmp = current.next
-                self.head = tmp
-            #remove other places
-            elif current.next != None and current.next.data == data :
-                current.next = current.next.next
-            current = current.next
 
     def print(self):
         current = self.head
