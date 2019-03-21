@@ -1,17 +1,7 @@
 class Node(object):
-
     def __init__(self, data=None, next=None):
         self.data = data
         self.next = next
-
-    def get_data(self):
-        return self.data
-
-    def get_next(self):
-        return self.next
-
-    def set_next(self, new_next):
-        self.next = new_next
 
 
 class LinkedList(object):
@@ -21,46 +11,55 @@ class LinkedList(object):
 
     def insert(self, data):
         new_node = Node(data)
-        new_node.set_next(self.head)
+        # set push the old value to come after old header.
+        new_node.next=self.head
+        # set the new head as the new value
         self.head = new_node
+
+    def delete(self, data ):
+        current = self.head
+        while current != None : 
+            #remove first one
+            if current.data == data :
+                self.head  = current.next
+            #remove other places
+            elif current.next != None and current.next.data == data :
+                current.next = current.next.next
+            current = current.next
 
     def size(self):
         current = self.head
         count = 0
         while current:
             count += 1
-            current = current.get_next()
+            current = current.next
         return count
 
     def search(self, data):
         current = self.head
-        while current:
-            if current.get_data() == data:
+        while current != None:
+            if current.data == data:
+                print("found it")
                 return current
-            else:
-                current = current.get_next()
+            current = current.next
         return None
 
-    def delete(self, data):
-        current = self.head
-        prev = None
-        while current:
-            if current.get_data() == data:
-                if current == self.head:
-                    self.head = current.get_next()
-                else:
-                    prev.set_next(current.get_next())
-                return current
-            prev = current
-            current = current.get_next()
-        return None
 
     def print(self):
-        lst = []
         current = self.head
-        while current:
-            lst.append(str(current.get_data()))
-            current = current.get_next()
-        print('->'.join(lst))
-
+        while current != None:
+            print(current.data,end="-")
+            current = current.next
+        print(" ")
+        
+#example of how to use it
+# lk = LinkedList()
+# lk.insert("a")
+# lk.insert("b")
+# lk.insert("c")
+# lk.print()
+# lk.search("a")
+# lk.delete("c")
+# lk.print()
+# print(lk.size())
 
